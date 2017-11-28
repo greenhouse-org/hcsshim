@@ -23,6 +23,16 @@ type HNSEndpoint struct {
 	DisableICC         bool              `json:",omitempty"`
 	PrefixLength       uint8             `json:",omitempty"`
 	IsRemoteEndpoint   bool              `json:",omitempty"`
+	Resources          Resources         `json:",omitempty"`
+}
+
+type Resources struct {
+	Allocators []Allocator `json:",omitempty"`
+}
+
+type Allocator struct {
+	CompartmentId    uint32 `json:"CompartmendId,omitempty"` // HNS returned JSON has a typo
+	EndpointPortGuid string `json:",omitempty"`
 }
 
 //SystemType represents the type of the system on which actions are done
