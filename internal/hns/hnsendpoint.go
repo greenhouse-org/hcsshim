@@ -24,7 +24,7 @@ type HNSEndpoint struct {
 	PrefixLength       uint8             `json:",omitempty"`
 	IsRemoteEndpoint   bool              `json:",omitempty"`
 	Namespace          *Namespace        `json:",omitempty"`
-	Resourses          Resourses         `json:",omitempty"`
+	Resources          Resources         `json:",omitempty"`
 }
 
 type Resources struct {
